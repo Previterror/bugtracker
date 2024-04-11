@@ -9,7 +9,7 @@ export const BugSchema = new Schema({
     creatorId: { type: Schema.ObjectId, ref: 'Account', required: true },
 },
     {
-        toJSON: { virtuals: true }
+        timestamps: true, toJSON: { virtuals: true }
     })
 
 BugSchema.virtual('creator', {
